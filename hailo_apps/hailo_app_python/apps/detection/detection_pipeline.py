@@ -45,8 +45,9 @@ class GStreamerDetectionApp(GStreamerApp):
         else:
             self.arch = self.options_menu.arch
 
-
-        if self.options_menu.hef_path is not None:
+        if user_data.hef_path is not None:
+            self.hef_path=user_data.hef_path
+        elif self.options_menu.hef_path is not None:
             self.hef_path = self.options_menu.hef_path
         else:
             self.hef_path = get_resource_path(DETECTION_PIPELINE, RESOURCES_MODELS_DIR_NAME)
