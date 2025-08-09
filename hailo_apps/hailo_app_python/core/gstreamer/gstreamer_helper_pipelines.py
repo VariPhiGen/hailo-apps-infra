@@ -111,7 +111,7 @@ def SOURCE_PIPELINE(video_source, video_width=640, video_height=640,
     elif source_type =='rtsp':
         source_element = (
             f"rtspsrc location={video_source} name=src_0  message-forward=true ! "
-            + "rtph264depay ! h264parse ! "
+            + "rtph265depay ! h265parse ! "
             + "queue name=hailo_preprocess_q_0 leaky=no max-size-buffers=5 max-size-bytes=0 max-size-time=0 ! "
             + "decodebin ! queue leaky=downstream max-size-buffers=5 max-size-bytes=0 max-size-time=0 ! "
             " video/x-raw, format=I420 ! "
