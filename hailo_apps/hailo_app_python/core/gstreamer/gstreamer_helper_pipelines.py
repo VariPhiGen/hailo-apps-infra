@@ -23,7 +23,7 @@ def get_source_type(input_source):
     else:
         return 'file'
 
-def QUEUE(name, max_size_buffers=2, max_size_bytes=0, max_size_time=0, leaky='no'):
+def QUEUE(name, max_size_buffers=1, max_size_bytes=0, max_size_time=0, leaky='no'):
     """
     Creates a GStreamer queue element string with the specified parameters.
 

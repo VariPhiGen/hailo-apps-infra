@@ -62,10 +62,10 @@ class GStreamerDetectionApp(GStreamerApp):
   
         self.post_function_name = DETECTION_POSTPROCESS_FUNCTION
         # User-defined label JSON file
-        if user_data.hef_path is not None:
-            self.labels_json=user_data.labels_json
+        if user_data.labels_json is not None:
+           self.labels_json=user_data.labels_json
         else:
-            self.labels_json = self.options_menu.labels_json
+           self.labels_json = self.options_menu.labels_json
 
         self.app_callback = app_callback
 
